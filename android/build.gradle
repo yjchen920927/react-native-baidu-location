@@ -3,12 +3,13 @@ apply plugin: 'com.android.library'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
-    //由于跟地图sdk同时存在时冲突,暂时注释掉
-//    sourceSets {
-//        main {
-//            jniLibs.srcDirs = ['libs']
-//        }
-//    }
+    
+    sourceSets {
+    //单独用于工作台，业主由于跟地图sdk同时存在时冲突,暂时注释掉
+        main {
+           jniLibs.srcDirs = ['libs']
+        }
+    }
     defaultConfig {
         minSdkVersion 16
         targetSdkVersion 23
